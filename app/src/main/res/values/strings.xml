@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">busandorea</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="drawer_opened">Opened Drawer</string>
+    <string name="drawer_closed">Closed Drawer</string>
+
+//리소스 정의 추가
+    <item name="action_login" type="id" />
+</resources>

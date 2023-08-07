@@ -8,4 +8,8 @@
 
 //리소스 정의 추가
     <item name="action_login" type="id" />
+    <item name="action_signin" type="id" />
+    <item name="action_location" type="id" />
+    <item name="action_stamp" type="id" />
+
 </resources>

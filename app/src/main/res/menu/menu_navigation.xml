@@ -6,12 +6,15 @@
         android:icon="@android:drawable/ic_media_play"
         android:title="로그인" />
     <item
+        android:id="@id/action_signin"
         android:icon="@android:drawable/ic_menu_help"
         android:title="회원가입"/>
     <item
+        android:id="@+id/action_location"
         android:icon="@android:drawable/ic_menu_search"
         android:title="위치등록"/>
     <item
+        android:id="@id/action_stamp"
         android:icon="@android:drawable/ic_menu_add"
         android:title="스탬프찍기"/>
     </group>

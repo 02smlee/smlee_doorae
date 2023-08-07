@@ -157,9 +157,6 @@ class AuthActivity : AppCompatActivity(){
 
     }
 
-
-
-
     // 매개변수를 모드라는 변수명, 문자열 타입.
     fun changeVisibility(mode: String){
         if(mode === "login"){

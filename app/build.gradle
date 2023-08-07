@@ -39,6 +39,16 @@ android {
 }
 
 dependencies {
+    //Drawer
+    implementation 'androidx.drawerlayout:drawerlayout:1.2.0'
+
+    //Navigation component
+    implementation "androidx.navigation:navigation-fragment-ktx:2.3.5"
+    implementation "androidx.navigation:navigation-ui-ktx:2.3.5"
+
+    //Fragment
+    implementation 'androidx.fragment:fragment-ktx:1.6.1'
+
     // Import the Firebase BoM
     implementation(platform("com.google.firebase:firebase-bom:32.2.0"))
 

@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     lateinit var toggle: ActionBarDrawerToggle
     lateinit var binding: ActivityMainBinding
 
+    //테스트
     class MyFragmentPagerAdapter(activity: FragmentActivity) : FragmentStateAdapter(activity) {
         val fragments: List<Fragment>
 

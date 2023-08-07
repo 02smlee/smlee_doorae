@@ -3,6 +3,7 @@ package com.example.busandorea
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -59,6 +60,23 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         TabLayoutMediator(binding.tabs, binding.viewpager) { tab, position ->
             tab.text = "Tab${(position + 1)}"
         }.attach()
+
+        binding.mainDrawerView.setNavigationItemSelectedListener {
+            when (it.itemId ) {
+                R.id.action_login -> {    // 로그인 버튼을 클릭하면 AuthActivity 화면으로 전환
+                    val intent = Intent(this, AuthActivity::class.java)
+                    startActivity(intent)
+                    true}
+
+                else -> {
+                                Log.d("lsy","test : item click : ${it.title}")
+            true
+                }
+            }
+//            Log.d("lsy","test : item click : ${it.title}")
+//            true
+        }
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -66,7 +84,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         return super.onCreateOptionsMenu(menu)
     }
 
-    // 액티비티에서 메뉴를 사용하려면 onCreateOptionsMenu 메서드를 오버라이드해야 합니다.
+    // 액티비티에서 메뉴를 사용하려면 onCreateOptionsMenu 메서드를 오버라이드해야
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         //이벤트가 toggle 버튼에서 제공된거라면..
         if (toggle.onOptionsItemSelected(item)) {
@@ -78,15 +96,16 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
+        return when (item.itemId) {
 
             R.id.action_login -> {
-                // 로그인 버튼을 클릭하면 AuthActivity 화면으로 전환합니다.
+                // 로그인 버튼을 클릭하면 AuthActivity 화면으로 전환
                 val intent = Intent(this, AuthActivity::class.java)
                 startActivity(intent)
-                return true
+                true
             }
-            else -> return super.onOptionsItemSelected(item)
+
+            else -> super.onOptionsItemSelected(item)
         }
     }
 }

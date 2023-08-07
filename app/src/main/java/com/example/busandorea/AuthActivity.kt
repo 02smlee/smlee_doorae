@@ -15,7 +15,7 @@ import com.google.android.gms.common.api.ApiException
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.GoogleAuthProvider
 
-class AuthActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+class AuthActivity : AppCompatActivity(){
     lateinit var binding: ActivityAuthBinding
 
 
@@ -156,40 +156,6 @@ class AuthActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
 
     }
-
-
-    // 액티비티에서 메뉴를 사용하려면 onCreateOptionsMenu 메서드를 오버라이드해야 합니다.
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.menu_navigation, menu)
-        return true
-
-
-    }
-//
-//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        return when (item.itemId) {
-//            R.id.action_login -> {
-//                // 로그인 버튼을 클릭하면 AuthActivity 화면으로 전환합니다.
-//                val intent = Intent(this, AuthActivity::class.java)
-//                startActivity(intent)
-//                true
-//            }
-//            else -> super.onOptionsItemSelected(item)
-//        }
-//    }
-    override fun onNavigationItemSelected(item: MenuItem): Boolean {
-    when (item.itemId) {
-
-        R.id.action_login -> {
-            // 로그인 버튼을 클릭하면 AuthActivity 화면으로 전환합니다.
-            val intent = Intent(this, AuthActivity::class.java)
-            startActivity(intent)
-            return true
-        }
-        else -> return super.onOptionsItemSelected(item)
-    }
-}
-
 
 
 

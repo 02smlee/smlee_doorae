@@ -61,15 +61,15 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             tab.text = "Tab${(position + 1)}"
         }.attach()
 
+        //---smlee
         binding.mainDrawerView.setNavigationItemSelectedListener {
             when (it.itemId ) {
-                R.id.action_login -> {    // 로그인 버튼을 클릭하면 AuthActivity 화면으로 전환
+                R.id.action_login -> {    // 로그인 버튼을 클릭하면 AuthActivity 엑티비티 화면으로 전환
                     val intent = Intent(this, AuthActivity::class.java)
                     startActivity(intent)
                     true}
 
-                else -> {
-                                Log.d("lsy","test : item click : ${it.title}")
+                else -> {Log.d("lsy","test : item click : ${it.title}")
             true
                 }
             }
